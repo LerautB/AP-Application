@@ -48,7 +48,7 @@ namespace AP_Estudia
             // 
             // id_input
             // 
-            this.id_input.Location = new System.Drawing.Point(65, 120);
+            this.id_input.Location = new System.Drawing.Point(65, 109);
             this.id_input.Name = "id_input";
             this.id_input.Size = new System.Drawing.Size(271, 20);
             this.id_input.TabIndex = 1;
@@ -93,6 +93,7 @@ namespace AP_Estudia
             this.Controls.Add(this.button1);
             this.Name = "login";
             this.Text = "login";
+            this.Load += new System.EventHandler(this.login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

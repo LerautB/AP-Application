@@ -88,5 +88,15 @@ namespace AP_Estudia
             this.panel1.Controls.Add(myForm);
             myForm.Show();
         }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

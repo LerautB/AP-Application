@@ -23,6 +23,11 @@ namespace AP_Estudia
             InitializeComponent();
         }
 
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string mot_de_passe = mdp_input.Text;
@@ -51,12 +56,20 @@ namespace AP_Estudia
 
             if(BCrypt.Verify(mot_de_passe, User_mdp))
             {
-                MessageBox.Show("Connexion réussi...");
+                //MessageBox.Show("Connexion réussi...");
+                //Estudia f = new Estudia();
+                //f.Show();
+                this.Hide();
+                var estudia = new Estudia();
+                estudia.Closed += (s, args) => this.Close();
+                estudia.Show();
             }
             else
             {
                 MessageBox.Show("Connexion échouée...");
             }
         }
+
+       
     }
 }
