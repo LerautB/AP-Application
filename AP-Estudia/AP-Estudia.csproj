@@ -71,6 +71,12 @@
     <Compile Include="Fenetres\AjoutPersonnel.Designer.cs">
       <DependentUpon>AjoutPersonnel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fenetres\CreationClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenetres\CreationClasse.Designer.cs">
+      <DependentUpon>CreationClasse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fenetres\Estudia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="Fenetres\AjoutPersonnel.resx">
       <DependentUpon>AjoutPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenetres\CreationClasse.resx">
+      <DependentUpon>CreationClasse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fenetres\Estudia.resx">
       <DependentUpon>Estudia.cs</DependentUpon>

@@ -62,7 +62,9 @@ namespace AP_Estudia.Modeles
         {
             conn.Open();
             MySqlCommand command = conn.CreateCommand();
-
+            string identifiant = "sfddf";
+            string mdpHash = "dsfsdf";
+            string mdpTemp = "dfdsf";
             command.Parameters.AddWithValue("@Nom", nom);
             command.Parameters.AddWithValue("@Prenom", prenom);
             command.Parameters.AddWithValue("@identifiant", identifiant);
@@ -70,7 +72,7 @@ namespace AP_Estudia.Modeles
             command.Parameters.AddWithValue("@mdpTemp", mdpTemp);
             command.Parameters.AddWithValue("@status", status);
             command.Parameters.AddWithValue("@dateNaiss", dateNaiss);
-
+            return true;
 
             command.CommandText = ("INSERT INTO utilisateurs (identifiant,nom, prenom,dateNaiss, mdp, mdpTemp,status) values (@identifiant,@nom,@prenom,@dateNaiss,@mdpHash,@mdpTemp,@status)");
 
@@ -80,11 +82,13 @@ namespace AP_Estudia.Modeles
                 {
                     var User = new Enseignants();
                     User.ajouter_enseignant(nom,prenom,matiere);
+                    return true;
                 }
                 else if(status == "Etudiant")
                 {
                     var User = new Eleve();
                     User.ajouter_etudiant(nom, prenom, idEtude);
+                    return true;
                 }
                 else if(status == "Administration")
                 {

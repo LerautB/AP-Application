@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AP_Estudia.Services
 {
-    public class Services
+    public static  class Services
     {
         public static string Shuffle(this string str)
         {
@@ -23,16 +23,18 @@ namespace AP_Estudia.Services
             }
             return new string(array);
         }
-        public string randomID(string nom, string prenom)
+        public static string randomID(string nom, string prenom)
         {
             string x = "0123456789";
-            prenom.SubString(0, prenom.Length + 1 );
-            int code = SubString()
+            prenom.Substring(0, prenom.Length + 1 );
+            int code = 5;
             string Identifiant = prenom + nom + code;
+            return Identifiant;
         }
-        public string randomPassword(int length = 8)
+        public static string randomPassword(int length = 8)
         {
-
+            string dsfds = "gddgdfg";
+            return dsfds;
         }
     }
 }
