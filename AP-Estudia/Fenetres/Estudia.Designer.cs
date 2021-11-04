@@ -30,13 +30,13 @@ namespace AP_Estudia
         private void InitializeComponent()
         {
             this.emploiDuTempsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDuPersonnelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionEtablissementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,12 @@ namespace AP_Estudia
             this.emploiDuTempsToolStripMenuItem.Size = new System.Drawing.Size(250, 91);
             this.emploiDuTempsToolStripMenuItem.Text = "Emploi du temps";
             this.emploiDuTempsToolStripMenuItem.Click += new System.EventHandler(this.emploiDuTempsToolStripMenuItem_Click);
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // gestionDesClassesToolStripMenuItem
             // 
@@ -107,12 +113,6 @@ namespace AP_Estudia
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
-            // 
             // Estudia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +121,7 @@ namespace AP_Estudia
             this.ClientSize = new System.Drawing.Size(1276, 762);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(934, 801);
             this.Name = "Estudia";

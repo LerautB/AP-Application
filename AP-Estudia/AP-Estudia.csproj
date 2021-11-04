@@ -113,6 +113,7 @@
     <Compile Include="Fenetres\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modeles\Classe.cs" />
     <Compile Include="Modeles\Eleve.cs" />
     <Compile Include="Modeles\Enseignants.cs" />
     <Compile Include="Modeles\Utilisateur.cs" />
@@ -124,6 +125,12 @@
     </Compile>
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\visuEDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenetres\visuEDT.Designer.cs">
+      <DependentUpon>visuEDT.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Fenetres\AjoutPersonnel.resx">
       <DependentUpon>AjoutPersonnel.cs</DependentUpon>
