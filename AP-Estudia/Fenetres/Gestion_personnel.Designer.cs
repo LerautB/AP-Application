@@ -34,22 +34,23 @@ namespace AP_Estudia
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 94);
+            this.button1.Location = new System.Drawing.Point(94, 76);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 173);
+            this.button1.Size = new System.Drawing.Size(152, 141);
             this.button1.TabIndex = 0;
             this.button1.Text = "Ajoutez personnel";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Gestion_personnel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1701, 821);
+            this.ClientSize = new System.Drawing.Size(1276, 667);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Gestion_personnel";
             this.Text = "Form1";
             this.ResumeLayout(false);

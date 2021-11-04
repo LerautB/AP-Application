@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AP_Estudia.Fenetres;
+using AP_Estudia.Modeles;
+using AP_Estudia.Services;
 
 namespace AP_Estudia
 {
@@ -20,6 +23,13 @@ namespace AP_Estudia
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var creation = new CreationPersonnel();
+            creation.Show();
         }
     }
 }

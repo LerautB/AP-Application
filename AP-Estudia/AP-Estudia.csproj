@@ -77,6 +77,12 @@
     <Compile Include="Fenetres\CreationClasse.Designer.cs">
       <DependentUpon>CreationClasse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fenetres\CreationPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenetres\CreationPersonnel.Designer.cs">
+      <DependentUpon>CreationPersonnel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fenetres\Estudia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,7 @@
     </Compile>
     <Compile Include="Modeles\Eleve.cs" />
     <Compile Include="Modeles\Enseignants.cs" />
+    <Compile Include="Modeles\Matieres.cs" />
     <Compile Include="Modeles\Utilisateur.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fenetres\CreationClasse.resx">
       <DependentUpon>CreationClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenetres\CreationPersonnel.resx">
+      <DependentUpon>CreationPersonnel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fenetres\Estudia.resx">
       <DependentUpon>Estudia.cs</DependentUpon>

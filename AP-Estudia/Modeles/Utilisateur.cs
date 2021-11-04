@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using AP_Estudia.Modeles;
+using AP_Estudia.Services;
 
 
 namespace AP_Estudia.Modeles
@@ -62,9 +63,10 @@ namespace AP_Estudia.Modeles
         {
             conn.Open();
             MySqlCommand command = conn.CreateCommand();
-            string identifiant = "sfddf";
-            string mdpHash = "dsfsdf";
-            string mdpTemp = "dfdsf";
+            string identifiant = Services.Services.randomID(nom, prenom);
+            string mdpTemp = Services.Services.randomPassword();
+            string mdpHash = BCrypt.HashPassword(mdpTemp);
+            
             command.Parameters.AddWithValue("@Nom", nom);
             command.Parameters.AddWithValue("@Prenom", prenom);
             command.Parameters.AddWithValue("@identifiant", identifiant);
@@ -78,19 +80,33 @@ namespace AP_Estudia.Modeles
 
             if (command.ExecuteNonQuery() > 0) 
             {
-                if(status == "Enseignant")
+                if (status == "Enseignant")
                 {
                     var User = new Enseignants();
-                    User.ajouter_enseignant(nom,prenom,matiere);
-                    return true;
+                    if (User.ajouter_enseignant(nom, prenom, matiere))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+
                 }
-                else if(status == "Etudiant")
+                else if (status == "Etudiant")
                 {
                     var User = new Eleve();
-                    User.ajouter_etudiant(nom, prenom, idEtude);
-                    return true;
+                    if (User.ajouter_etudiant(nom, prenom, idEtude))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-                else if(status == "Administration")
+                else if (status == "Administration")
                 {
                     return true;
                 }
