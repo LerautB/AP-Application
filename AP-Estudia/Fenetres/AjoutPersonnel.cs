@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace AP_Estudia
 {
-    public partial class Gestion_Classes : Form
+    public partial class AjoutPersonnel : Form
     {
-        public Gestion_Classes()
+        public AjoutPersonnel()
         {
             InitializeComponent();
+        }
+
+        private void AjoutPersonnel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

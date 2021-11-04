@@ -16,5 +16,10 @@ namespace AP_Estudia
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,12 +36,15 @@ namespace AP_Estudia
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // emploiDuTempsToolStripMenuItem
             // 
             this.emploiDuTempsToolStripMenuItem.AutoSize = false;
+            this.emploiDuTempsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testToolStripMenuItem});
             this.emploiDuTempsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.emploiDuTempsToolStripMenuItem.Name = "emploiDuTempsToolStripMenuItem";
             this.emploiDuTempsToolStripMenuItem.Size = new System.Drawing.Size(250, 91);
@@ -102,6 +105,13 @@ namespace AP_Estudia
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1276, 667);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // Estudia
             // 
@@ -129,6 +139,7 @@ namespace AP_Estudia
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
     }
 }
 
