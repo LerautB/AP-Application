@@ -104,7 +104,6 @@ namespace AP_Estudia
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(753, 293);
             this.dataGridView.TabIndex = 7;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick_1);
             this.dataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_CellMouseDoubleClick);
             // 
             // Supression
@@ -171,7 +170,6 @@ namespace AP_Estudia
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Gestion_Classes";
             this.Text = "Gestion_Classes";
-            this.Load += new System.EventHandler(this.Gestion_Classes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

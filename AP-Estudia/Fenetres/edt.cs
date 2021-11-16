@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using AP_Estudia.Modeles;
+//using AP_Estudia.Fenetres;
 
 namespace AP_Estudia
 {
@@ -15,6 +18,16 @@ namespace AP_Estudia
         public edt()
         {
             InitializeComponent();
+        }
+
+        private void visuEdt_Click(object sender, EventArgs e)
+        {
+            this.panelEdt.Controls.Clear();
+            selecteClasse myForm = new selecteClasse();
+            myForm.AutoScroll = true;
+            myForm.TopLevel = false;
+            this.panelEdt.Controls.Add(myForm);
+            myForm.Show();
         }
     }
 }

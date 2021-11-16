@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using AP_Estudia.Modeles;
 
 namespace AP_Estudia
 {
@@ -19,33 +20,43 @@ namespace AP_Estudia
         {
             InitializeComponent();
         }
-
-        private void CreationClasse_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void button1_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string nbclasse = numClasseCrea.Text;
-            string nameclasse = nomClasseCrea.Text;
-            MySqlCommand command = conn.CreateCommand();
-            command.Parameters.AddWithValue("@nbclasse", nbclasse);
-            command.Parameters.AddWithValue("@nomclasse", nameclasse);
-            command.CommandText = "insert into etudes (classe, nom) values (@nbclasse, @nomclasse)";
-            if (command.ExecuteNonQuery() > 0)
+            var objetClasse = new Classe();
+            if(numClasseCrea.Text != string.Empty)
             {
-                MessageBox.Show("insertion");
+                if(nomClasseCrea.Text != string.Empty)
+                {
+                    if(nomClasseCrea.Text.Length < 50)
+                    {
+                        if (objetClasse.creationClasse(numClasseCrea.Text, nomClasseCrea.Text) == true)
+                        {
+                            MessageBox.Show("Insertion réussi");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Insertion raté");
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nom trop long");
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Nom Vide");
+                }
             }
             else
             {
-                MessageBox.Show("fail");
+                MessageBox.Show("Num Vide");
+
             }
-            conn.Close();
-            this.Close();
-            //Displaydata();
+            
         }
     }
 }
