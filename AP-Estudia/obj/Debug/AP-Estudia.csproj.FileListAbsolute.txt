@@ -181,3 +181,4 @@ C:\Users\Bastien Leraut\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP-Est
 C:\Users\Bastien Leraut\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP-Estudia.exe
 C:\Users\Bastien Leraut\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP-Estudia.pdb
 C:\Users\Bastien Leraut\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP_Estudia.Fenetres.CreationPersonnel.resources
+C:\Users\Bastien Leraut\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP_Estudia.Fenetres.Creation_Etudiant.resources

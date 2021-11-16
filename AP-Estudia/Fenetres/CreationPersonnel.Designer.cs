@@ -29,56 +29,56 @@ namespace AP_Estudia.Fenetres
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.nom = new System.Windows.Forms.TextBox();
+            this.prenom = new System.Windows.Forms.MaskedTextBox();
+            this.mail = new System.Windows.Forms.MaskedTextBox();
+            this.poste = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.date = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.matiere = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nom
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.textBox1.Location = new System.Drawing.Point(29, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 27);
-            this.textBox1.TabIndex = 0;
+            this.nom.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.nom.Location = new System.Drawing.Point(31, 101);
+            this.nom.Name = "nom";
+            this.nom.Size = new System.Drawing.Size(182, 27);
+            this.nom.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // prenom
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(299, 101);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(182, 27);
-            this.maskedTextBox1.TabIndex = 1;
+            this.prenom.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.prenom.Location = new System.Drawing.Point(299, 101);
+            this.prenom.Name = "prenom";
+            this.prenom.Size = new System.Drawing.Size(182, 27);
+            this.prenom.TabIndex = 1;
             // 
-            // maskedTextBox2
+            // mail
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(29, 205);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(182, 27);
-            this.maskedTextBox2.TabIndex = 2;
+            this.mail.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.mail.Location = new System.Drawing.Point(29, 205);
+            this.mail.Name = "mail";
+            this.mail.Size = new System.Drawing.Size(182, 27);
+            this.mail.TabIndex = 2;
             // 
-            // comboBox1
+            // poste
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Enseignant",
+            this.poste.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.poste.FormattingEnabled = true;
+            this.poste.Items.AddRange(new object[] {
+            "Professeur",
             "Administration"});
-            this.comboBox1.Location = new System.Drawing.Point(299, 204);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 28);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.poste.Location = new System.Drawing.Point(299, 204);
+            this.poste.Name = "poste";
+            this.poste.Size = new System.Drawing.Size(182, 28);
+            this.poste.TabIndex = 3;
+            this.poste.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -120,17 +120,17 @@ namespace AP_Estudia.Fenetres
             this.label4.TabIndex = 7;
             this.label4.Text = "Nom";
             // 
-            // dateTimePicker1
+            // date
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(31, 302);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(182, 20);
-            this.dateTimePicker1.TabIndex = 8;
+            this.date.Location = new System.Drawing.Point(31, 302);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(182, 20);
+            this.date.TabIndex = 8;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.button1.Location = new System.Drawing.Point(403, 385);
+            this.button1.Location = new System.Drawing.Point(442, 403);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 35);
             this.button1.TabIndex = 9;
@@ -138,20 +138,22 @@ namespace AP_Estudia.Fenetres
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox2
+            // matiere
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(299, 301);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(182, 21);
-            this.comboBox2.TabIndex = 10;
-            this.comboBox2.Visible = false;
+            this.matiere.FormattingEnabled = true;
+            this.matiere.Location = new System.Drawing.Point(299, 301);
+            this.matiere.Name = "matiere";
+            this.matiere.Size = new System.Drawing.Size(182, 21);
+            this.matiere.TabIndex = 10;
+            this.matiere.Visible = false;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(26, 353);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(12, 364);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(352, 67);
+            this.label5.Size = new System.Drawing.Size(404, 77);
             this.label5.TabIndex = 11;
             this.label5.Text = "label5";
             // 
@@ -162,17 +164,17 @@ namespace AP_Estudia.Fenetres
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(543, 450);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.matiere);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.date);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.poste);
+            this.Controls.Add(this.mail);
+            this.Controls.Add(this.prenom);
+            this.Controls.Add(this.nom);
             this.Name = "CreationPersonnel";
             this.Text = "CreationPersonnel";
             this.ResumeLayout(false);
@@ -182,17 +184,17 @@ namespace AP_Estudia.Fenetres
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox nom;
+        private System.Windows.Forms.MaskedTextBox prenom;
+        private System.Windows.Forms.MaskedTextBox mail;
+        private System.Windows.Forms.ComboBox poste;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox matiere;
         private System.Windows.Forms.Label label5;
     }
 }

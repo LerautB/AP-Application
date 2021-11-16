@@ -59,7 +59,7 @@ namespace AP_Estudia.Modeles
 
 
         } 
-        public bool Inscription(string nom,string prenom, string dateNaiss, string status, string matiere = "", string idEtude = "")
+        public bool Inscription(string nom,string prenom,string email ,string dateNaiss, string status, string matiere = "", string idEtude = "")
         {
             conn.Open();
             MySqlCommand command = conn.CreateCommand();
@@ -67,28 +67,40 @@ namespace AP_Estudia.Modeles
             string mdpTemp = Services.Services.randomPassword();
             string mdpHash = BCrypt.HashPassword(mdpTemp);
             
-            command.Parameters.AddWithValue("@Nom", nom);
-            command.Parameters.AddWithValue("@Prenom", prenom);
+            command.Parameters.AddWithValue("@nom", nom);
+            command.Parameters.AddWithValue("@prenom", prenom);
             command.Parameters.AddWithValue("@identifiant", identifiant);
+            
             command.Parameters.AddWithValue("@mdpHash", mdpHash);
             command.Parameters.AddWithValue("@mdpTemp", mdpTemp);
             command.Parameters.AddWithValue("@status", status);
             command.Parameters.AddWithValue("@dateNaiss", dateNaiss);
-            return true;
+            
+            if(email.Length > 0)
+            {
+                command.Parameters.AddWithValue("@mail", email);
+                command.CommandText = ("INSERT INTO utilisateur (identifiant,nom, prenom,email,dateNaiss, mdp, mdpTemp,statut) VALUES (@identifiant,@nom,@prenom,@mail,@dateNaiss,@mdpHash,@mdpTemp,@status)");
+            }
+            else
+            {
+                command.CommandText = ("INSERT INTO utilisateur (identifiant,nom, prenom,dateNaiss, mdp, mdpTemp,statut) VALUES (@identifiant,@nom,@prenom,@dateNaiss,@mdpHash,@mdpTemp,@status)");
 
-            command.CommandText = ("INSERT INTO utilisateurs (identifiant,nom, prenom,dateNaiss, mdp, mdpTemp,status) values (@identifiant,@nom,@prenom,@dateNaiss,@mdpHash,@mdpTemp,@status)");
+            }
 
+            
             if (command.ExecuteNonQuery() > 0) 
             {
-                if (status == "Enseignant")
+                if (status == "Professeur")
                 {
                     var User = new Enseignants();
-                    if (User.ajouter_enseignant(nom, prenom, matiere))
+                    if (User.ajouter_enseignant(nom, prenom, matiere) == true)
                     {
+                        conn.Close();
                         return true;
                     }
                     else
                     {
+                        conn.Close();
                         return false;
                     }
 
@@ -97,24 +109,30 @@ namespace AP_Estudia.Modeles
                 else if (status == "Etudiant")
                 {
                     var User = new Eleve();
-                    if (User.ajouter_etudiant(nom, prenom, idEtude))
+                    if (User.ajouter_etudiant(nom, prenom, idEtude) == true)
                     {
+                        conn.Close();
                         return true;
                     }
                     else
                     {
+                        conn.Close();
                         return false;
                     }
                 }
                 else if (status == "Administration")
                 {
+                    conn.Close();
                     return true;
                 }
             } 
             else 
             {
+                conn.Close();
                 return false;
             }
+            conn.Close();
+            return false;
         }
     }
 }

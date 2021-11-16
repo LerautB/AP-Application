@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AP_Estudia.Modeles;
+using AP_Estudia.Services;
+using AP_Estudia.Fenetres;
 
 namespace AP_Estudia
 {
@@ -15,6 +18,14 @@ namespace AP_Estudia
         public Gestion_Etablissement()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                this.Hide();
+                var creation = new Creation_Etudiant();
+                creation.Show();
+            
         }
     }
 }
