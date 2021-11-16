@@ -83,5 +83,20 @@ namespace AP_Estudia.Modeles
                 return false;
             }
         }
+
+        private void allClasse()
+        {
+            MySqlCommand commande = conn.CreateCommand();
+
+            commande.CommandText = "SELECT * FROM classes;";
+            MySqlDataReader reader = commande.ExecuteReader();
+            while (reader.Read())
+            {
+                int idClasse = reader.GetInt32(0);
+                string Classe = reader.GetString(1);
+
+            }
+
+        }
     }
 }

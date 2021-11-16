@@ -113,6 +113,12 @@
     <Compile Include="Fenetres\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fenetres\selectClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenetres\selectClasse.Designer.cs">
+      <DependentUpon>selectClasse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modeles\Classe.cs" />
     <Compile Include="Modeles\Eleve.cs" />
     <Compile Include="Modeles\Enseignants.cs" />
@@ -155,6 +161,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fenetres\login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenetres\selectClasse.resx">
+      <DependentUpon>selectClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenetres\visuEDT.resx">
+      <DependentUpon>visuEDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

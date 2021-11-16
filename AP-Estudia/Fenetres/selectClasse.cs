@@ -7,19 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using AP_Estudia.Modeles;
 
 namespace AP_Estudia
 {
-    public partial class visuEDT : Form
+    public partial class selecteClasse : Form
     {
-        public visuEDT()
+        public selecteClasse()
         {
             InitializeComponent();
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.selecteClasse
         }
     }
 }

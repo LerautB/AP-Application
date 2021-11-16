@@ -179,3 +179,5 @@ C:\Users\david\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP-Estudia.cspr
 C:\Users\david\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP-Estudia.csproj.CopyComplete
 C:\Users\david\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP-Estudia.exe
 C:\Users\david\Source\Repos\AP-Application2\AP-Estudia\obj\Debug\AP-Estudia.pdb
+C:\Users\david\source\repos\AP-Application2\AP-Estudia\obj\Debug\AP_Estudia.visuEDT.resources
+C:\Users\david\source\repos\AP-Application2\AP-Estudia\obj\Debug\AP_Estudia.selecteClasse.resources

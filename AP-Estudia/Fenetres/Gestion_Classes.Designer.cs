@@ -170,7 +170,6 @@ namespace AP_Estudia
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Gestion_Classes";
             this.Text = "Gestion_Classes";
-            this.Load += new System.EventHandler(this.Gestion_Classes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

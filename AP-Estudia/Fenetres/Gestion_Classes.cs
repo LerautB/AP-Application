@@ -120,10 +120,5 @@ namespace AP_Estudia
 
             displayData();
         }
-
-        private void Gestion_Classes_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
