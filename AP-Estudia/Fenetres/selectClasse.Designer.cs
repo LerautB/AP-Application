@@ -73,7 +73,7 @@ namespace AP_Estudia
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "selecteClasse";
             this.Text = "selectClasse";
             this.ResumeLayout(false);
