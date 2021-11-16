@@ -14,8 +14,9 @@ namespace AP_Estudia
 {
     public partial class selecteClasse : Form
     {
-        public selecteClasse()
+        public selecteClasse(edt edt)
         {
+
             InitializeComponent();
         }
 

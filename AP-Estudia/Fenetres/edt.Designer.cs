@@ -76,6 +76,7 @@ namespace AP_Estudia
             this.panelEdt.Name = "panelEdt";
             this.panelEdt.Size = new System.Drawing.Size(1107, 607);
             this.panelEdt.TabIndex = 1;
+            this.panelEdt.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEdt_Paint);
             // 
             // edt
             // 
