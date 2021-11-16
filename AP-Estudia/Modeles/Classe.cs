@@ -7,12 +7,15 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using AP_Estudia.Modeles;
 using System.Windows.Forms;
+using AP_Estudia.Services;
+using System.Collections.Generic;
 
 namespace AP_Estudia.Modeles
 {
     class Classe
     {
         MySqlConnection conn = new MySqlConnection("database=estudia; server=localhost; user id = root; pwd=");
+        private List<Part> liste_classes = new List<Part>();
         //MySqlDataAdapter adpt;
         //DataTable dt;
         
@@ -84,19 +87,31 @@ namespace AP_Estudia.Modeles
             }
         }
 
-        private void allClasse()
+        public MySqlDataAdapter allClasse()
         {
-            MySqlCommand commande = conn.CreateCommand();
+            //MySqlCommand commande = conn.CreateCommand();
 
-            commande.CommandText = "SELECT * FROM classes;";
-            MySqlDataReader reader = commande.ExecuteReader();
-            while (reader.Read())
+            //commande.CommandText = "SELECT * FROM classes;";
+            //MySqlDataReader reader = commande.ExecuteReader();
+            //while (reader.Read())
+            //{
+            //    liste_classes.Add(new Part() { PartName = reader.GetString(1), PartId = Convert.ToInt32(reader.GetString(0)) });
+            //}
+            conn.Open();
+            MySqlDataAdapter adpt = new MySqlDataAdapter("SELECT * FROM etudes", conn);
+            conn.Close();
+            return adpt;
+        }
+        public List<Part> Test
+        {
+            get
             {
-                int idClasse = reader.GetInt32(0);
-                string Classe = reader.GetString(1);
-
+                return liste_classes;
             }
-
+            protected set
+            {
+                liste_classes = value;
+            }
         }
     }
 }

@@ -146,6 +146,7 @@ namespace AP_Estudia.Fenetres
             this.matiere.Size = new System.Drawing.Size(182, 21);
             this.matiere.TabIndex = 10;
             this.matiere.Visible = false;
+            this.matiere.SelectedIndexChanged += new System.EventHandler(this.matiere_SelectedIndexChanged);
             // 
             // label5
             // 

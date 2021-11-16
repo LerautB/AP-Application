@@ -39,14 +39,6 @@ namespace AP_Estudia.Fenetres
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string Select = this.filiere.Text;
-            if (Select == "Professeur")
-            {
-
-
-
-
-                
-            }
             if (Select == "Générale")
             {
                 this.niveau.Items.Clear();
@@ -54,6 +46,7 @@ namespace AP_Estudia.Fenetres
             }
             else
             {
+                var Niveau = new Classe();
                 this.niveau.Show();
             }
         }

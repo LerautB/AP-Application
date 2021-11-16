@@ -134,6 +134,7 @@
     <Compile Include="Modeles\Classe.cs" />
     <Compile Include="Modeles\Eleve.cs" />
     <Compile Include="Modeles\Enseignants.cs" />
+    <Compile Include="Modeles\Etude.cs" />
     <Compile Include="Modeles\Filiere.cs" />
     <Compile Include="Modeles\Matieres.cs" />
     <Compile Include="Modeles\Utilisateur.cs" />

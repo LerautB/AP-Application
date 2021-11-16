@@ -84,5 +84,10 @@ namespace AP_Estudia.Fenetres
                 this.matiere.Hide();
             }
         }
+
+        private void matiere_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

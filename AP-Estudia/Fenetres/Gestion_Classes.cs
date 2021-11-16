@@ -17,9 +17,6 @@ namespace AP_Estudia
 
     public partial class Gestion_Classes : Form
     {
-        MySqlConnection conn = new MySqlConnection("database=estudia; server=localhost; user id = root; pwd=");
-        MySqlDataAdapter adpt;
-        DataTable dt;
         int idClasse;
        
         public Gestion_Classes()
@@ -39,12 +36,14 @@ namespace AP_Estudia
         /*AFFICHAGE DES DONNEES*/
         public void displayData()
         {
-            conn.Open();
-            adpt = new MySqlDataAdapter("SELECT * FROM etudes", conn);
-            dt = new DataTable();
-            adpt.Fill(dt);
+            var Classe = new Classe();
+            MySqlDataAdapter listeClasse = Classe.allClasse();
+           
+
+             DataTable dt = new DataTable();
+            listeClasse.Fill(dt);
             dataGridView.DataSource = dt;
-            conn.Close();
+    
         }
 
         /*CLEAR DES INPUTS*/
@@ -119,6 +118,11 @@ namespace AP_Estudia
             clear();
 
             displayData();
+        }
+
+        private void Gestion_Classes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
