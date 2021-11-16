@@ -14,15 +14,16 @@ namespace AP_Estudia
 {
     public partial class selecteClasse : Form
     {
-        public selecteClasse(edt edt)
+        public selecteClasse()
         {
-
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.selecteClasse
+            this.Close();
+            var edt = new visuEDT();
+            edt.Show();
         }
     }
 }
