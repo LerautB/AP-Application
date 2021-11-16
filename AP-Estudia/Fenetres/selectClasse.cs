@@ -21,7 +21,7 @@ namespace AP_Estudia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.selecteClasse
+            //this.selecteClasse
         }
     }
 }
