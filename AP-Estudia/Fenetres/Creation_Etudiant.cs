@@ -27,11 +27,14 @@ namespace AP_Estudia.Fenetres
 
             foreach (Part aPart in Filiere.Test)
             {
-                this.filiere.Items.AddRange(new object[] { aPart.PartName });
+                ComboboxItem filiere = new ComboboxItem();
+                filiere.Text = aPart.PartName;
+                filiere.Value = aPart.PartId;
+                this.filiere.Items.Add(filiere);
             }
         }
 
-        private void vailder_Click(object sender, EventArgs e)
+        private void valider_Click(object sender, EventArgs e)
         {
 
         }

@@ -113,7 +113,7 @@ namespace AP_Estudia.Fenetres
             this.vailder.TabIndex = 7;
             this.vailder.Text = "Valider";
             this.vailder.UseVisualStyleBackColor = true;
-            this.vailder.Click += new System.EventHandler(this.vailder_Click);
+            this.vailder.Click += new System.EventHandler(this.valider_Click);
             // 
             // filiere
             // 

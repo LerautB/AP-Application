@@ -13,7 +13,7 @@ namespace AP_Estudia.Modeles
     {
         MySqlConnection conn = new MySqlConnection("database=estudia; server=localhost; user id = root; pwd=");
 
-        public bool ajouter_enseignant(string nom,string prenom, string matiere)
+        public bool ajouter_enseignant(string nom,string prenom,int idMat,string matiere)
         {
             string idUtilisateur = "";
 
@@ -34,10 +34,11 @@ namespace AP_Estudia.Modeles
             command2.Parameters.AddWithValue("@Nom", nom);
             command2.Parameters.AddWithValue("@Prenom", prenom);
             command2.Parameters.AddWithValue("@idUtilisateur", idUtilisateur);
+            command2.Parameters.AddWithValue("@idMat", idMat);
             command2.Parameters.AddWithValue("@matiere", matiere);
 
 
-            command2.CommandText = "INSERT INTO Enseignants (Nom,Prenom,idUtilisateur,matiere) VALUES(@Nom,@Prenom,@idUtilisateur,@matiere)";
+            command2.CommandText = "INSERT INTO Enseignants (Nom,Prenom,idUtilisateur,idMatiere,matiere) VALUES(@Nom,@Prenom,@idUtilisateur,@idMat,@matiere)";
             if (command2.ExecuteNonQuery() > 0)
             {
                 conn.Close();

@@ -178,6 +178,7 @@ namespace AP_Estudia.Fenetres
             this.Controls.Add(this.nom);
             this.Name = "CreationPersonnel";
             this.Text = "CreationPersonnel";
+            this.Load += new System.EventHandler(this.CreationPersonnel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
