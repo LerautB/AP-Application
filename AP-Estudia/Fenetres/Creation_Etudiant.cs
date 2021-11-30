@@ -27,7 +27,7 @@ namespace AP_Estudia.Fenetres
 
             foreach (Part aPart in Filiere.Test)
             {
-                ComboboxItem filiere = new ComboboxItem();
+                ComboBoxItem filiere = new ComboBoxItem();
                 filiere.Text = aPart.PartName;
                 filiere.Value = aPart.PartId;
                 this.filiere.Items.Add(filiere);

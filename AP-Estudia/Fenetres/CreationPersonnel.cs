@@ -72,7 +72,7 @@ namespace AP_Estudia.Fenetres
                 
                 foreach (Part aPart in Matieres.Test)
                 {
-                    ComboboxItem matiere = new ComboboxItem();
+                    ComboBoxItem matiere = new ComboBoxItem();
                     matiere.Text = aPart.PartName;
                     matiere.Value = aPart.PartId;
                     this.matiere.Items.Add(matiere);
