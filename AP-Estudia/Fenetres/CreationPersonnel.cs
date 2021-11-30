@@ -27,7 +27,7 @@ namespace AP_Estudia.Fenetres
             var User = new Utilisateur();
             if(this.poste.Text == "Administration")
             {
-                if(User.Inscription(this.nom.Text, this.prenom.Text, this.mail.Text , this.date.Value.Date.ToString("yyyy-MM-dd"), this.poste.Text) == true)
+                if(User.Inscription(this.nom.Text, this.prenom.Text, this.mail.Text , this.date.Value.Date.ToString("yyyy-MM-dd"),this.poste.Text) == true)
                 {
                     label5.ForeColor = Color.GreenYellow;
                     label5.Text = "Inscription d'un Administrateur : succès";
@@ -41,7 +41,7 @@ namespace AP_Estudia.Fenetres
             }
             else if(this.poste.Text == "Professeur")
             {
-                if(User.Inscription(this.nom.Text, this.prenom.Text, this.mail.Text, this.date.Value.Date.ToString("yyyy-MM-dd"), this.poste.Text, this.matiere.Text) == true)
+                if(User.Inscription(this.nom.Text, this.prenom.Text, this.mail.Text, this.date.Value.Date.ToString("yyyy-MM-dd"), this.poste.Text,this.matiere.SelectedIndex, this.matiere.Text) == true)
                 {
                     label5.ForeColor = Color.GreenYellow;
                     label5.Text = "Inscription d'un Professeur : succès";
@@ -68,11 +68,15 @@ namespace AP_Estudia.Fenetres
             {
                 
                 var Matieres = new Matieres();
-                var reader = Matieres.get_liste_matiere();
+                Matieres.get_liste_matiere();
                 
                 foreach (Part aPart in Matieres.Test)
                 {
-                    this.matiere.Items.AddRange(new object[] { aPart.PartName });
+                    ComboboxItem matiere = new ComboboxItem();
+                    matiere.Text = aPart.PartName;
+                    matiere.Value = aPart.PartId;
+                    this.matiere.Items.Add(matiere);
+
                 }
                 
                 
@@ -86,6 +90,11 @@ namespace AP_Estudia.Fenetres
         }
 
         private void matiere_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreationPersonnel_Load(object sender, EventArgs e)
         {
 
         }

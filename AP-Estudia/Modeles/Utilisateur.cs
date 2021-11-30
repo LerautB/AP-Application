@@ -59,7 +59,7 @@ namespace AP_Estudia.Modeles
 
 
         } 
-        public bool Inscription(string nom,string prenom,string email ,string dateNaiss, string status, string matiere = "", string idEtude = "")
+        public bool Inscription(string nom,string prenom,string email ,string dateNaiss, string status,int idMat = 0,string matiere = "", string idEtude = "")
         {
             conn.Open();
             MySqlCommand command = conn.CreateCommand();
@@ -93,7 +93,7 @@ namespace AP_Estudia.Modeles
                 if (status == "Professeur")
                 {
                     var User = new Enseignants();
-                    if (User.ajouter_enseignant(nom, prenom, matiere) == true)
+                    if (User.ajouter_enseignant(nom, prenom,idMat,matiere) == true)
                     {
                         conn.Close();
                         return true;
