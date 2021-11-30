@@ -16,6 +16,7 @@ namespace AP_Estudia.Modeles
     {
         MySqlConnection conn = new MySqlConnection("database=estudia; server=localhost; user id = root; pwd=");
         private List<Part> liste_classes = new List<Part>();
+
         //MySqlDataAdapter adpt;
         //DataTable dt;
         
@@ -88,16 +89,17 @@ namespace AP_Estudia.Modeles
         }
 
         public MySqlDataAdapter allClasse()
-        {
-            //MySqlCommand commande = conn.CreateCommand();
-
-            //commande.CommandText = "SELECT * FROM classes;";
-            //MySqlDataReader reader = commande.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    liste_classes.Add(new Part() { PartName = reader.GetString(1), PartId = Convert.ToInt32(reader.GetString(0)) });
-            //}
+        {   
             conn.Open();
+            MySqlCommand commande = conn.CreateCommand();
+
+            commande.CommandText = "SELECT * FROM etudes;";
+            MySqlDataReader reader = commande.ExecuteReader();
+            while (reader.Read())
+            {
+                liste_classes.Add(new Part() { PartName = reader.GetString(2), PartNumClasse = reader.GetString(1), PartId = Convert.ToInt32(reader.GetString(0)) });
+            }
+
             MySqlDataAdapter adpt = new MySqlDataAdapter("SELECT * FROM etudes", conn);
             conn.Close();
             return adpt;

@@ -22,9 +22,16 @@ namespace AP_Estudia
 
         private void visuEdt_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var select = new selecteClasse();
-            select.Show();
+            //this.Hide();
+            //var select = new selecteClasse();
+            //select.Show();
+
+            this.panelEdt.Controls.Clear();
+            selecteClasse myForm = new selecteClasse();
+            myForm.AutoScroll = true;
+            myForm.TopLevel = false;
+            this.panelEdt.Controls.Add(myForm);
+            myForm.Show();
         }
 
         private void panelEdt_Paint(object sender, PaintEventArgs e)

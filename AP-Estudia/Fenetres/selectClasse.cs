@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using AP_Estudia.Modeles;
+using AP_Estudia.Services;
 
 namespace AP_Estudia
 {
@@ -24,6 +25,20 @@ namespace AP_Estudia
             this.Close();
             var edt = new visuEDT();
             edt.Show();
+        }
+
+        private void listeClasses(object sender, EventArgs e)
+        {
+            var classes = new Classe();
+            classes.allClasse();
+            
+            foreach(Part aPart in classes.Test)
+            {
+                ComboBoxItem classe = new ComboBoxItem();
+                classe.Text = aPart.PartName + " " + aPart.PartNumClasse;
+                classe.Value = aPart.PartId;
+                this.listeClasse.Items.Add(classe);
+            }
         }
     }
 }

@@ -17,6 +17,8 @@ namespace AP_Estudia.Services
 
         public int PartId { get; set; }
 
+        public string PartNumClasse { get; set; }
+
         public override string ToString()
         {
             return "ID: " + PartId + "   Name: " + PartName;
@@ -86,6 +88,16 @@ namespace AP_Estudia.Services
             decimal nbRepeat = Math.Ceiling(A);
             string mdp = Shuffle(Repeat(x,Convert.ToInt32(nbRepeat)));
             return mdp.Substring(1,length);
+        }
+    }
+    public class ComboBoxItem
+    {
+        public string Text { get; set; }
+        public object Value { get; set; }
+
+        public override string ToString()
+        {
+            return Text;
         }
     }
 }

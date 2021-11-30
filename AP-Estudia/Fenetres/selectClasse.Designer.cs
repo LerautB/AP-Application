@@ -30,7 +30,7 @@ namespace AP_Estudia
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listeClasse = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -45,14 +45,14 @@ namespace AP_Estudia
             this.label1.Text = "Sélectionner une classe";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // comboBox1
+            // listeClasse
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(460, 213);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(224, 28);
-            this.comboBox1.TabIndex = 1;
+            this.listeClasse.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listeClasse.FormattingEnabled = true;
+            this.listeClasse.Location = new System.Drawing.Point(460, 213);
+            this.listeClasse.Name = "listeClasse";
+            this.listeClasse.Size = new System.Drawing.Size(224, 28);
+            this.listeClasse.TabIndex = 1;
             // 
             // button1
             // 
@@ -71,11 +71,12 @@ namespace AP_Estudia
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 607);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.listeClasse);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "selecteClasse";
             this.Text = "selectClasse";
+            this.Load += new System.EventHandler(this.listeClasses);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,7 +85,7 @@ namespace AP_Estudia
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox listeClasse;
         private System.Windows.Forms.Button button1;
     }
 }
