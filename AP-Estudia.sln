@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AP-Estudia", "AP-Estudia\AP-Estudia.csproj", "{2BA775EE-91B5-4184-B9E8-EB4D524CD1F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AP-estudia", "AP-Estudia\AP-estudia.csproj", "{2BA775EE-91B5-4184-B9E8-EB4D524CD1F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

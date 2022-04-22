@@ -1,5 +1,5 @@
 ﻿
-namespace AP_Estudia
+namespace AP_estudia
 {
     partial class Gestion_Classes
     {
@@ -46,7 +46,7 @@ namespace AP_Estudia
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(256, 200);
+            this.label2.Location = new System.Drawing.Point(153, 197);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 17);
@@ -55,7 +55,7 @@ namespace AP_Estudia
             // 
             // numClasse
             // 
-            this.numClasse.Location = new System.Drawing.Point(404, 197);
+            this.numClasse.Location = new System.Drawing.Point(302, 194);
             this.numClasse.Margin = new System.Windows.Forms.Padding(4);
             this.numClasse.Name = "numClasse";
             this.numClasse.Size = new System.Drawing.Size(132, 25);
@@ -63,7 +63,7 @@ namespace AP_Estudia
             // 
             // nomClasse
             // 
-            this.nomClasse.Location = new System.Drawing.Point(880, 197);
+            this.nomClasse.Location = new System.Drawing.Point(777, 194);
             this.nomClasse.Margin = new System.Windows.Forms.Padding(4);
             this.nomClasse.Name = "nomClasse";
             this.nomClasse.Size = new System.Drawing.Size(132, 25);
@@ -71,7 +71,7 @@ namespace AP_Estudia
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(500, 89);
+            this.Insert.Location = new System.Drawing.Point(392, 92);
             this.Insert.Margin = new System.Windows.Forms.Padding(4);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(310, 30);
@@ -99,16 +99,17 @@ namespace AP_Estudia
             this.dataGridView.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.dataGridView.EnableHeadersVisualStyles = false;
             this.dataGridView.GridColor = System.Drawing.Color.White;
-            this.dataGridView.Location = new System.Drawing.Point(259, 344);
+            this.dataGridView.Location = new System.Drawing.Point(156, 321);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.Size = new System.Drawing.Size(753, 293);
             this.dataGridView.TabIndex = 7;
             this.dataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_CellMouseDoubleClick);
             // 
             // Supression
             // 
-            this.Supression.Location = new System.Drawing.Point(912, 264);
+            this.Supression.Location = new System.Drawing.Point(809, 264);
             this.Supression.Margin = new System.Windows.Forms.Padding(4);
             this.Supression.Name = "Supression";
             this.Supression.Size = new System.Drawing.Size(100, 30);
@@ -119,7 +120,7 @@ namespace AP_Estudia
             // 
             // Modif
             // 
-            this.Modif.Location = new System.Drawing.Point(259, 264);
+            this.Modif.Location = new System.Drawing.Point(156, 264);
             this.Modif.Margin = new System.Windows.Forms.Padding(4);
             this.Modif.Name = "Modif";
             this.Modif.Size = new System.Drawing.Size(100, 30);
@@ -131,7 +132,7 @@ namespace AP_Estudia
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(755, 200);
+            this.label1.Location = new System.Drawing.Point(652, 197);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 17);
@@ -142,7 +143,7 @@ namespace AP_Estudia
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(555, 22);
+            this.label3.Location = new System.Drawing.Point(407, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 30);
@@ -154,8 +155,8 @@ namespace AP_Estudia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1276, 667);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1115, 639);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Modif);
             this.Controls.Add(this.Supression);

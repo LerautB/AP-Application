@@ -1,5 +1,5 @@
 ﻿
-namespace AP_Estudia.Fenetres
+namespace AP_estudia.Fenetres
 {
     partial class CreationPersonnel
     {
@@ -41,6 +41,7 @@ namespace AP_Estudia.Fenetres
             this.button1 = new System.Windows.Forms.Button();
             this.matiere = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nom
@@ -62,19 +63,20 @@ namespace AP_Estudia.Fenetres
             // mail
             // 
             this.mail.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.mail.Location = new System.Drawing.Point(29, 205);
+            this.mail.Location = new System.Drawing.Point(558, 101);
             this.mail.Name = "mail";
             this.mail.Size = new System.Drawing.Size(182, 27);
             this.mail.TabIndex = 2;
             // 
             // poste
             // 
+            this.poste.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.poste.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.poste.FormattingEnabled = true;
             this.poste.Items.AddRange(new object[] {
             "Professeur",
             "Administration"});
-            this.poste.Location = new System.Drawing.Point(299, 204);
+            this.poste.Location = new System.Drawing.Point(299, 208);
             this.poste.Name = "poste";
             this.poste.Size = new System.Drawing.Size(182, 28);
             this.poste.TabIndex = 3;
@@ -84,7 +86,7 @@ namespace AP_Estudia.Fenetres
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(295, 165);
+            this.label1.Location = new System.Drawing.Point(295, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 20);
             this.label1.TabIndex = 4;
@@ -94,7 +96,7 @@ namespace AP_Estudia.Fenetres
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 165);
+            this.label2.Location = new System.Drawing.Point(554, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 20);
             this.label2.TabIndex = 5;
@@ -122,15 +124,16 @@ namespace AP_Estudia.Fenetres
             // 
             // date
             // 
-            this.date.Location = new System.Drawing.Point(31, 302);
+            this.date.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.Location = new System.Drawing.Point(31, 206);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(182, 20);
+            this.date.Size = new System.Drawing.Size(182, 27);
             this.date.TabIndex = 8;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.button1.Location = new System.Drawing.Point(442, 403);
+            this.button1.Location = new System.Drawing.Point(31, 307);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 35);
             this.button1.TabIndex = 9;
@@ -140,10 +143,12 @@ namespace AP_Estudia.Fenetres
             // 
             // matiere
             // 
+            this.matiere.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.matiere.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matiere.FormattingEnabled = true;
-            this.matiere.Location = new System.Drawing.Point(299, 301);
+            this.matiere.Location = new System.Drawing.Point(558, 208);
             this.matiere.Name = "matiere";
-            this.matiere.Size = new System.Drawing.Size(182, 21);
+            this.matiere.Size = new System.Drawing.Size(182, 28);
             this.matiere.TabIndex = 10;
             this.matiere.Visible = false;
             this.matiere.SelectedIndexChanged += new System.EventHandler(this.matiere_SelectedIndexChanged);
@@ -152,18 +157,28 @@ namespace AP_Estudia.Fenetres
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(12, 364);
+            this.label5.Location = new System.Drawing.Point(197, 307);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(404, 77);
             this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(554, 180);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Matière";
             // 
             // CreationPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(543, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1107, 638);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.matiere);
             this.Controls.Add(this.button1);
@@ -176,6 +191,7 @@ namespace AP_Estudia.Fenetres
             this.Controls.Add(this.mail);
             this.Controls.Add(this.prenom);
             this.Controls.Add(this.nom);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreationPersonnel";
             this.Text = "CreationPersonnel";
             this.Load += new System.EventHandler(this.CreationPersonnel_Load);
@@ -198,5 +214,6 @@ namespace AP_Estudia.Fenetres
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox matiere;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

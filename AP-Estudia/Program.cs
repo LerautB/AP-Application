@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AP_Estudia
+namespace AP_estudia
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace AP_Estudia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Estudia());
+            Application.Run(new estudia());
         }
     }
 }

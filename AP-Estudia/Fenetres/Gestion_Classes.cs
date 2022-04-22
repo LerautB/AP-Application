@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using AP_Estudia.Modeles;
+using AP_estudia.Modeles;
 
 
 
-namespace AP_Estudia
+namespace AP_estudia
 {
 
     public partial class Gestion_Classes : Form

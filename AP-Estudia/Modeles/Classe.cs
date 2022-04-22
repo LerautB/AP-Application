@@ -5,21 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
-using AP_Estudia.Modeles;
+using AP_estudia.Modeles;
 using System.Windows.Forms;
-using AP_Estudia.Services;
-using System.Collections.Generic;
+using AP_estudia.Services;
 
-namespace AP_Estudia.Modeles
+namespace AP_estudia.Modeles
 {
     class Classe
     {
         MySqlConnection conn = new MySqlConnection("database=estudia; server=localhost; user id = root; pwd=");
-        private List<Part> liste_classes = new List<Part>();
+        public List<Classe> liste_classes = new List<Classe>();
+        public List<Classe> listeClasse = new List<Classe>();
+
+        public string nameClasse { get; set; }
+        public string numClasse { get; set; }
+        public int idClasse { get; set; }
+        public int PartId { get; set; }
+        public string PartName { get; set; }
 
         //MySqlDataAdapter adpt;
         //DataTable dt;
-        
+
 
         //public bool displayData()
         //{
@@ -97,23 +103,28 @@ namespace AP_Estudia.Modeles
             MySqlDataReader reader = commande.ExecuteReader();
             while (reader.Read())
             {
-                liste_classes.Add(new Part() { PartName = reader.GetString(2), PartNumClasse = reader.GetString(1), PartId = Convert.ToInt32(reader.GetString(0)) });
+                liste_classes.Add(new Classe() { nameClasse = reader.GetString(2), numClasse = reader.GetString(1), idClasse = Convert.ToInt32(reader.GetString(0)) });
             }
 
             MySqlDataAdapter adpt = new MySqlDataAdapter("SELECT * FROM etudes", conn);
             conn.Close();
             return adpt;
         }
-        public List<Part> Test
+        public List<Classe> listClasse(/*int idEtude*/)
         {
-            get
+            conn.Open();
+            MySqlCommand command = conn.CreateCommand();
+            //command.Parameters.AddWithValue("@idEtude", idEtude);
+            command.CommandText = "SELECT idEtude, nom, classe FROM etudes";
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                return liste_classes;
+                listeClasse.Add(new Classe() { PartName = reader.GetString(1) + " " + reader.GetString(2), PartId = reader.GetInt32(0) });
             }
-            protected set
-            {
-                liste_classes = value;
-            }
+            reader.Close();
+            conn.Close();
+            return listeClasse;
         }
+
     }
 }

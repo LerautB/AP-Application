@@ -1,4 +1,4 @@
-﻿namespace AP_Estudia
+﻿namespace AP_estudia
 {
     partial class CreationClasse
     {

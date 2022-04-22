@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace AP_Estudia.Properties
+namespace AP_estudia.Properties
 {
     /// <summary>
     ///   Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
@@ -43,7 +43,7 @@ namespace AP_Estudia.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AP_Estudia.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AP_estudia.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

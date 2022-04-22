@@ -1,5 +1,5 @@
 ﻿
-namespace AP_Estudia
+namespace AP_estudia
 {
     partial class login
     {
@@ -42,7 +42,7 @@ namespace AP_Estudia
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(271, 35);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Connection";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -74,7 +74,7 @@ namespace AP_Estudia
             // mdp
             // 
             this.mdp.AutoSize = true;
-            this.mdp.Location = new System.Drawing.Point(68, 186);
+            this.mdp.Location = new System.Drawing.Point(62, 189);
             this.mdp.Name = "mdp";
             this.mdp.Size = new System.Drawing.Size(70, 13);
             this.mdp.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace AP_Estudia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(430, 598);
             this.Controls.Add(this.mdp);
             this.Controls.Add(this.identifiant);

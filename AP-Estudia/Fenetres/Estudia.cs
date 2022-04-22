@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_estudia.Fenetres;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AP_Estudia
+namespace AP_estudia
 {
-    public partial class Estudia : Form
+    public partial class estudia : Form
     {
-        public Estudia()
+        public estudia()
         {
             InitializeComponent();
         }
@@ -52,7 +53,7 @@ namespace AP_Estudia
         private void gestionDesClassesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.panel1.Controls.Clear();
-            Gestion_Classes myForm = new Gestion_Classes();
+            gestionClasse myForm = new gestionClasse();
             myForm.AutoScroll = true;
             myForm.TopLevel = false;
             this.panel1.Controls.Add(myForm);
@@ -82,7 +83,7 @@ namespace AP_Estudia
         private void settingsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.panel1.Controls.Clear();
-            Settings myForm = new Settings();
+            ProfilEtu myForm = new ProfilEtu(this.panel1);
             myForm.AutoScroll = true;
             myForm.TopLevel = false;
             this.panel1.Controls.Add(myForm);

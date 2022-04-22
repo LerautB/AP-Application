@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AP_Estudia.Fenetres;
-using AP_Estudia.Modeles;
-using AP_Estudia.Services;
+using AP_estudia.Fenetres;
+using AP_estudia.Modeles;
+using AP_estudia.Services;
 
-namespace AP_Estudia
+namespace AP_estudia
 {
     public partial class Gestion_personnel : Form
     {
@@ -27,9 +27,34 @@ namespace AP_Estudia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var creation = new CreationPersonnel();
-            creation.Show();
+            this.panelGestionPersonnel.Controls.Clear();
+            CreationPersonnel myForm = new CreationPersonnel();
+            myForm.AutoScroll = true;
+            myForm.TopLevel = false;
+            this.panelGestionPersonnel.Controls.Add(myForm);
+            myForm.Show();
         }
+
+        private void listePersonnel_Click(object sender, EventArgs e)
+        {
+            this.panelGestionPersonnel.Controls.Clear();
+            Gestion_Administration myForm = new Gestion_Administration();
+            myForm.AutoScroll = true;
+            myForm.TopLevel = false;
+            this.panelGestionPersonnel.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.panelGestionPersonnel.Controls.Clear();
+            Gestion_Enseignants listeEnseignants = new Gestion_Enseignants();
+            listeEnseignants.AutoScroll = true;
+            listeEnseignants.TopLevel = false;
+            this.panelGestionPersonnel.Controls.Add(listeEnseignants);
+            listeEnseignants.Show();
+        }
+
+
     }
 }

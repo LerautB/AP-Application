@@ -1,22 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using AP_Estudia.Modeles;
-using AP_Estudia.Services;
+using AP_estudia.Services;
+using AP_estudia.Modeles;
+using System.Collections.Generic;
+using System;
 
-namespace AP_Estudia.Modeles
+
+namespace AP_estudia.Modeles
 {
     
     class Matieres
     {
         
-        private List<Part> ListeMatiere = new List<Part>();
+        public List<Matieres> ListeMatiere = new List<Matieres>();
         MySqlConnection conn = new MySqlConnection("database=estudia; server=localhost; user id = root; pwd=");
-        public bool get_liste_matiere()
+        public string name { get; set; }
+        public int id { get; set; }
+
+        public MySqlDataAdapter get_liste_matiere()
         {
             conn.Open();
             MySqlCommand command = conn.CreateCommand();
@@ -25,21 +32,70 @@ namespace AP_Estudia.Modeles
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {
-                ListeMatiere.Add(new Part() { PartName = reader.GetString(1), PartId = Convert.ToInt32(reader.GetString(0)) });
+                ListeMatiere.Add(new Matieres() { name = reader.GetString(1), id = Convert.ToInt32(reader.GetString(0)) });
             }
+            MySqlDataAdapter adpt = new MySqlDataAdapter(command.CommandText, conn);
+
             conn.Close();
 
-            return true;
+            return adpt;
+            
         }
-        public List<Part> Test
+        public bool ajouterMatiere(string nom)
         {
-            get
+            conn.Open();
+            MySqlCommand command2 = conn.CreateCommand();
+            command2.Parameters.AddWithValue("@Nom", nom);
+
+            command2.CommandText = "INSERT INTO matieres (matiere) VALUES(@Nom)";
+            if (command2.ExecuteNonQuery() > 0)
             {
-                return ListeMatiere;
+                conn.Close();
+                return true;
             }
-            protected set
+            else
             {
-                ListeMatiere = value;
+                conn.Close();
+                return false;
+            }
+        }
+        public bool updateMatiere(int idMatiere, string nom)
+        {
+            conn.Open();
+            MySqlCommand command = conn.CreateCommand();
+            command.Parameters.AddWithValue("@idMatiere", idMatiere);
+            command.Parameters.AddWithValue("@nom", nom);
+
+
+            command.CommandText = "UPDATE matieres SET matiere=@nom WHERE idMatiere = @idMatiere;";
+            if (command.ExecuteNonQuery() > 0)
+            {
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        public bool supprMatiere(int idMatiere)
+        {
+            conn.Open();
+            MySqlCommand command = conn.CreateCommand();
+
+            command.Parameters.AddWithValue("@idMatiere", idMatiere);
+
+            command.CommandText = "DELETE FROM matieres  WHERE idMatiere = @idMatiere";
+            if (command.ExecuteNonQuery() > 0)
+            {
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                conn.Close();
+                return false;
             }
         }
     }
